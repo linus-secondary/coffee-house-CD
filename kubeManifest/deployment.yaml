@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: coffee-house
-          image: linusindevops/coffee-house:13
+          image: linusindevops/coffee-house:14
           ports:
             - containerPort: 5000
