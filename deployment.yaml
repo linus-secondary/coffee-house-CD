@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coffee-house
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: coffee-house
+  template:
+    metadata:
+      labels:
+        app: coffee-house
+    spec:
+      containers:
+        - name: coffee-house
+          image: your-dockerhub-username/coffee-house:latest
+          ports:
+            - containerPort: 5000
