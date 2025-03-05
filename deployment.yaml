@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: coffee-house
-          image: your-dockerhub-username/coffee-house:latest
+          image: linusindevops/coffee-house:latest
           ports:
             - containerPort: 5000
