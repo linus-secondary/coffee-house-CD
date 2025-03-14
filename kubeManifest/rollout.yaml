@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
         - name: coffee-house
-          image: linusindevops/coffee-house:76  # Jenkins will update this
+          image: linusindevops/coffee-house:77
           ports:
             - containerPort: 5000
