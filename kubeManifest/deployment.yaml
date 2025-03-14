@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coffee-house
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: coffee-house
+  template:
+    metadata:
+      labels:
+        app: coffee-house
+    spec:
+      containers:
+        - name: coffee-house
+          image: linusindevops/coffee-house:75
+          ports:
+            - containerPort: 5000
