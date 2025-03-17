@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: coffee-house
-          image: linusindevops/coffee-house:81
+          image: linusindevops/coffee-house:82
           ports:
             - containerPort: 5000
   strategy:
