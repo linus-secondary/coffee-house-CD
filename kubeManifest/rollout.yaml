@@ -1,5 +1,5 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
   name: coffee-house
   annotations:
@@ -19,3 +19,11 @@ spec:
           image: linusindevops/coffee-house:80
           ports:
             - containerPort: 5000
+  strategy:
+    canary:
+      steps:
+        - setWeight: 20
+        - pause: {}
+        - setWeight: 50
+        - pause: {duration: 120s}
+        - setWeight: 100
